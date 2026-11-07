@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare Three Quotes</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Compare Three Quotes</h1>
+    <p>A, B, C — same version, same math, honest deltas.</p>
+    <p class="tag">Works alongside the worksheet · local only</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice" style="margin:1.25rem 0 0;">
+    <strong>Fair comparison rule:</strong> these numbers are only meaningful if
+    all three quotes are for the <em>same coverage version</em>. Fix limits,
+    deductibles, add-ons, vehicle, and annual miles first (docs/04).
+  </div>
+
+  <section class="panel" style="margin-top:1.25rem;">
+    <h2>Enter three normalized quotes</h2>
+    <p>Annual cost, identical coverage version. Load your worksheet rows with
+    the button below, or type them in.</p>
+    <div class="row-actions">
+      <button id="pullFromWorksheet" type="button" class="secondary">Pull from worksheet</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+      <div>
+        <label for="qa-name">Quote A — carrier</label>
+        <input type="text" id="qa-name" placeholder="Carrier A">
+        <label for="qa-annual" style="margin-top:.5rem;">Annual $</label>
+        <input type="number" id="qa-annual" min="0" step="1">
+      </div>
+      <div>
+        <label for="qb-name">Quote B — carrier</label>
+        <input type="text" id="qb-name" placeholder="Carrier B">
+        <label for="qb-annual" style="margin-top:.5rem;">Annual $</label>
+        <input type="number" id="qb-annual" min="0" step="1">
+      </div>
+      <div>
+        <label for="qc-name">Quote C — carrier</label>
+        <input type="text" id="qc-name" placeholder="Carrier C">
+        <label for="qc-annual" style="margin-top:.5rem;">Annual $</label>
+        <input type="number" id="qc-annual" min="0" step="1">
+      </div>
+    </div>
+    <div class="row-actions" style="margin-top:1rem;">
+      <button id="compareBtn" type="button">Compare</button>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Before you trust the winner</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Limits identical?</td><td>The #1 way a comparison lies: cheaper = thinner.</td></tr>
+        <tr><td>Deductibles identical?</td><td>$1,000 vs $500 deductible moves premium a lot.</td></tr>
+        <tr><td>Rental + roadside included?</td><td>Price them separately when excluded (~$5–10/mo combined usual).</td></tr>
+        <tr><td>Same carrier rating & complaint record?</td><td>AM Best + NAIC indexes, 5 minutes (docs/04, rule 3).</td></tr>
+        <tr><td>Term normalized?</td><td>6mo × 2 = 12mo totals, not monthly teaser rates.</td></tr>
+        <tr><td>Any "today only" pressure?</td><td>Real rates survive a night's sleep; treat pressure as data.</td></tr>
+        <tr><td>New policy binds before old cancels?</td><td>Never allow even a one-day lapse (docs/07, rule 1).</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Car Insurance Shopping Calm Guide — published by Asdale Dynamics, LLC. Educational only.</p>
+    <p><a href="index.html">Start</a> · <a href="worksheet.html">Worksheet</a></p>
+  </div>
+</footer>
+<script src="js/compare.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Insurance Shopping Calm Guide</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Car Insurance Shopping Calm Guide</h1>
+    <p>Plain-English insurance shopping — step by step, never condescending.</p>
+    <p class="tag">Works offline · no accounts · no network calls · data stays in your browser</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice" style="margin:1.25rem 0 0;">
+    <strong>Educational only.</strong> Not legal, financial, or insurance advice.
+    Coverage and minimums vary by state; confirm with your state insurance
+    department and a licensed agent. Never enter real personal data
+    (full name, address, SSN, license number) anywhere you don't trust — including
+    here. This site keeps entries in your own browser and sends nothing anywhere.
+  </div>
+
+  <nav class="cardnav" aria-label="Site pages">
+    <a href="worksheet.html">Quote-Tracking Worksheet
+      <small>Log quotes, normalize to annual cost, spot the cheapest at equal coverage.</small></a>
+    <a href="compare.html">Compare Three Quotes
+      <small>Side-by-side matrix with deltas and fine-print prompts.</small></a>
+    <a href="index.html" aria-current="page">Start
+      <small>You are here.</small></a>
+  </nav>
+
+  <section class="panel">
+    <h2>The calm path, in seven steps</h2>
+    <ol>
+      <li>Learn the seven core coverage words — <a href="#" data-doc="01">docs/01</a></li>
+      <li>State minimums vs. sensible limits — <a href="#" data-doc="02">docs/02</a></li>
+      <li>Discounts nobody mentions — <a href="#" data-doc="03">docs/03</a></li>
+      <li>Compare three quotes fairly, apples to apples — <a href="#" data-doc="04">docs/04</a></li>
+      <li>When dropping full coverage makes sense — <a href="#" data-doc="05">docs/05</a></li>
+      <li>AI chat as homework helper, privacy rules — <a href="#" data-doc="06">docs/06</a></li>
+      <li>Checklists and call scripts — <a href="#" data-doc="07">docs/07</a></li>
+    </ol>
+    <p>The docs live in <code>docs/</code> as plain markdown next to this site.
+    The links above mark the chapters; open the files from your editor or repo
+    reader. A glossary is in <code>docs/glossary.md</code>.</p>
+  </section>
+
+  <section class="panel">
+    <h2>How this site works</h2>
+    <ul>
+      <li><strong>No build step.</strong> Serve the <code>site/</code> folder with any static server.</li>
+      <li><strong>No network calls.</strong> Nothing is fetched, posted, or tracked.</li>
+      <li><strong>No accounts.</strong> The worksheet saves into your browser's
+      <code>localStorage</code> on this device only.</li>
+      <li><strong>No personal data needed.</strong> The worksheet fields ask for
+      carriers and premium numbers — never your license number or SSN.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Quick loop</h2>
+    <ol>
+      <li>Open <a href="worksheet.html">the worksheet</a>, write your frozen coverage version.</li>
+      <li>Collect three quotes (one call, one direct site, one independent agent).</li>
+      <li>Log each as it arrives; the sheet normalizes terms to annual cost.</li>
+      <li>Check the <a href="compare.html">comparison page</a>; verify the winner's
+      fine print before paying anyone.</li>
+      <li>Never cancel the old policy before the new one binds.</li>
+    </ol>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Car Insurance Shopping Calm Guide — published by
+    Asdale Dynamics, LLC. Educational only; not legal, financial, or insurance advice.</p>
+    <p>MIT licensed. See <code>LICENSE</code> in the project root.</p>
+  </div>
+</footer>
+<script src="js/worksheet.js"></script>
+</body>
+</html>

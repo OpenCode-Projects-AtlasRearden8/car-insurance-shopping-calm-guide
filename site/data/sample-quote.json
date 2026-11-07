@@ -1,0 +1,44 @@
+{
+  "_comment": "Example data shape for worksheet exports. Illustrative only - no real carrier, price, or person is represented.",
+  "project": "car-insurance-shopping-calm-guide",
+  "fixedVersion": {
+    "liability": "100/300/100",
+    "um_uim": "Match liability",
+    "collision_deductible": 500,
+    "comprehensive_deductible": 500,
+    "extras": "rental $40/day + roadside",
+    "vehicle_miles": "example sedan, 9000 mi/yr"
+  },
+  "quotes": [
+    {
+      "carrier": "Carrier A (example)",
+      "channel": "Direct site",
+      "limits": "100/300/100",
+      "deductibles": "500/500",
+      "termMonths": 6,
+      "premium": 480,
+      "annual": 960,
+      "notes": "rental+roadside included"
+    },
+    {
+      "carrier": "Carrier B (example)",
+      "channel": "Independent agent",
+      "limits": "100/300/100",
+      "deductibles": "500/500",
+      "termMonths": 12,
+      "premium": 895.5,
+      "annual": 895.5,
+      "notes": "12-month rate lock; rental included"
+    },
+    {
+      "carrier": "Carrier C (example)",
+      "channel": "Captive agent",
+      "limits": "100/300/100",
+      "deductibles": "500/500",
+      "termMonths": 6,
+      "premium": 515,
+      "annual": 1030,
+      "notes": "no rental or roadside"
+    }
+  ]
+}

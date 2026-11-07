@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote-Tracking Worksheet</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Quote-Tracking Worksheet</h1>
+    <p>Log every insurance quote as it arrives. Normalized to apples-to-apples.</p>
+    <p class="tag">Saved only in this browser · nothing is transmitted</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice" style="margin:1.25rem 0 0;">
+    <strong>Privacy:</strong> entries save to your browser's <code>localStorage</code>.
+    Nothing leaves this device. Use carrier names and premium numbers only —
+    never your license number, SSN, or full address.
+  </div>
+
+  <section class="panel" style="margin-top:1.25rem;">
+    <h2>Step 1 — Freeze your coverage version</h2>
+    <p>Every quote answers the same question. Write it once, keep it fixed.</p>
+    <div id="fixedVersion">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.75rem;">
+        <div><label for="fv-liab">Liability limits</label><input type="text" id="fv-liab" placeholder="100/300/100"></div>
+        <div><label for="fv-um">UM/UIM limits</label><input type="text" id="fv-um" placeholder="Match liability"></div>
+        <div><label for="fv-colded">Collision deductible $</label><input type="number" id="fv-colded" min="0" step="100" placeholder="500"></div>
+        <div><label for="fv-compded">Comprehensive deductible $</label><input type="number" id="fv-compded" min="0" step="100" placeholder="500"></div>
+        <div><label for="fv-add">Rental / roadside included?</label><input type="text" id="fv-add" placeholder="Yes, $40/day / $1,200"></div>
+        <div><label for="fv-car">Vehicle + annual miles</label><input type="text" id="fv-car" placeholder="2017 sedan, ~9k mi/yr"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Step 2 — Log each quote</h2>
+    <div class="row-actions">
+      <button id="addQuote" type="button">+ Add quote row</button>
+      <button id="loadSample" type="button" class="secondary">Load example</button>
+      <button id="exportJson" type="button" class="secondary">Export JSON</button>
+      <button id="clearAll" type="button" class="danger">Clear all</button>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table id="quotesTable">
+        <thead>
+          <tr>
+            <th>Carrier</th>
+            <th>Channel</th>
+            <th>Limits</th>
+            <th>Deductibles</th>
+            <th>Term (mo)</th>
+            <th>Premium $</th>
+            <th>Annual $</th>
+            <th>Notes / riders</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="quoteRows"></tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem;">
+      Annual column = premium ÷ (term ÷ 12). Cheapest row is highlighted automatically.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Audit prompts</h2>
+    <ul>
+      <li>Does the cheapest quote have the <strong>same limits</strong> you froze? If not, it isn't cheaper — it's thinner.</li>
+      <li>Did it include rental and roadside? Price those separately if not.</li>
+      <li>6-month or 12-month rate? Check the annual column, not the monthly.</li>
+      <li>Any discount promised on the phone shown on the written quote?</li>
+      <li>Will the price change at bind when credit/CLUE is checked? Ask (docs/04, rule 6).</li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Car Insurance Shopping Calm Guide — published by Asdale Dynamics, LLC. Educational only.</p>
+    <p><a href="index.html">Start</a> · <a href="compare.html">Comparison</a> · <a href="../docs/00-start-here.md">docs/00</a></p>
+  </div>
+</footer>
+<script src="js/worksheet.js"></script>
+</body>
+</html>
